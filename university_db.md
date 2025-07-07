@@ -11,11 +11,55 @@ Utilizzare https://www.drawio.com/ per la creazione dello schema.
 Esportare quindi il diagramma in pnge caricarlo nella repo come visto in classe
 
 ## Entities
--department
--degree program
+-departments
+-degree_program
 -courses
 -professors
--exam session
--student
--score
+-exam sessions
+-students
+-scores
+
+## Tables 
+-departments
+-degree_program
+-courses
+-professors
+-exam sessions
+-students
+-scores
+
+### department
+-id BIGINT AUTO_INCREMENTAL PRIMARY_KEY UNIQUE NOTNULL
+-name VARCHAR (50)
+
+### degree_program
+-id BIGINT AUTO_INCREMENTAL PRIMARY_KEY UNIQUE NOTNULL
+-name VARCHAR (50)
+-year YEAR (YYYY)
+
+### courses
+-id | BIGINT AUTO_INCREMENTAL PRIMARY_KEY UNIQUE NOTNULL
+-name | VARCHAR (50)
+-credits training | TINYINT
+
+### professors
+-id | BIGINT AUTO_INCREMENTAL PRIMARY_KEY UNIQUE NOTNULL
+-name | VARCHAR (50)
+-lastname | VARCHAR(50)
+-birth date | DATE (YYYY-MM-GG)
+
+### exam session
+-id | BIGINT AUTO_INCREMENTAL PRIMARY_KEY UNIQUE NOTNULL
+-date | DATE (YYYY-MM-GG)
+
+### student
+-id | BIGINT AUTO_INCREMENTAL PRIMARY_KEY UNIQUE NOTNULL
+-name | VARCHAR (50)
+-lastname | VARCHAR(50)
+-birth date | DATE (YYYY-MM-GG)
+
+### score
+-id | BIGINT AUTO_INCREMENTAL PRIMARY_KEY UNIQUE NOTNULL
+-number | TINYINT
+-note | TEXT (500)
 
