@@ -61,11 +61,12 @@ AND `degrees`.`level` =  "magistrale"
  ``` sql
 USE `university_db`;
 SELECT *
-FROM `teachers`
-JOIN  `course_teacher` ON `course_teacher`.`teacher_id` = `teachers`.`id`
-JOIN  `degrees` ON `course_teacher`. `course_id` = `courses`. `id`
-JOIN  `courses` ON `courses`.`degree_id` = `degrees`.`id`
-WHERE `teachers`.`name` =  "Fulvio Amato"
+FROM `courses`
+JOIN  `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
+JOIN  `teachers` ON `course_teacher`. `teacher_id` = `teachers`. `id`
+WHERE `teachers`.`name` =  "Fulvio" 
+AND `teachers`.`surname` =  "Amato" 
+AND `teachers`.`id` =  44;
 
 ``` 
 ### 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome 
