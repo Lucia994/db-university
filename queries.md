@@ -84,6 +84,7 @@ Corretto
 ```sql
 USE `university_db`;
 SELECT COUNT(*) 
-AS `teachers`
+AS `number_of_teachers_nophone`
+FROM `teachers`
 WHERE `phone` IS NULL;
 ```
