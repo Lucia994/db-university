@@ -19,6 +19,7 @@ GROUP BY `teachers_same_building`
 ``` 
 
 ### 3. Calcolare la media dei voti di ogni appello d'esame 
+SBAGLIATA
 ``` sql
 USE `university_db`;
 SELECT AVG(`vote`) AS  `exam_id` AS `grade_point_average`
@@ -38,6 +39,12 @@ GROUP BY `degrees_for_each_department`
 ## Join:
 ### 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
 ``` sql
+USE `university_db`;
+SELECT *
+FROM `students`
+JOIN `degrees`
+ON `students`.`degree_id` =  `degrees`.`id`
+WHERE `degrees`.`name` =  "Corso di Laurea in Economia"
 
 ``` 
 ### 2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
