@@ -10,7 +10,11 @@ GROUP BY `students_for_year`
 ```
 ### 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio 
 ``` sql
-
+USE `university_db`;
+SELECT COUNT(*)
+AS  `total_teachers`, `office_address` AS `teachers_same_building`
+FROM `teachers`
+GROUP BY `teachers_same_building`
 
 ``` 
 
