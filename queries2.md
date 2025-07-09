@@ -20,10 +20,18 @@ GROUP BY `teachers_same_building`
 
 ### 3. Calcolare la media dei voti di ogni appello d'esame 
 ``` sql
-
+USE `university_db`;
+SELECT AVG(`vote`) AS  `exam_id` AS `grade_point_average`
+FROM `exam_student`
+GROUP BY `grade_point_average`
 ``` 
 ### 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 ``` sql
+USE `university_db`;
+SELECT COUNT(*)
+AS  `total_degrees`, `department_id` AS `degrees_for_each_department`
+FROM `degrees`
+GROUP BY `degrees_for_each_department`
 
 ``` 
 
